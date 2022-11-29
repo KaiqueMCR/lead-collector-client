@@ -25,20 +25,20 @@ export function Register() {
   }
   
   async function handleSubmit(e: React.MouseEvent) {
-    if (name != '' && email != '' && tel != '' && pro != '' && tel.length >= 16) {
-      e?.preventDefault()
-        try {
-          await axios.post(import.meta.env.VITE_SERVER_URL, data)
-          toast.success('Enviado com sucesso!')
-          setTimeout(() => {
-            window.location.replace(import.meta.env.VITE_REDIRECT_TO)
-          }, 3000)
+    if (name != '' && email != '' && tel != '' && pro != '' && tel.length == 15) {
+      e.preventDefault()
+
+      try {
+        await axios.post(import.meta.env.VITE_SERVER_URL, data)
+        toast.success('Enviado com sucesso!')
+        setTimeout(() => {
+          window.location.replace(import.meta.env.VITE_REDIRECT_TO)
+        }, 3000)
         } catch (error) {
           toast.error('Ago deu errado. Tente Novamente!')
-        }
+        }   
       }
     }
-
 
     return (
       <div className="flex flex-col justify-center items-center gap-8">
@@ -49,7 +49,7 @@ export function Register() {
                 <input required onChange={(e)=> setEmail(e.currentTarget.value)} type="email" placeholder="Email*" className="w-full p-2 rounded outline-[#1c60ad] bg-zinc-200 py-4 placeholder-zinc-500" />
                 <input required onChange={(e)=> setPro(e.currentTarget.value)} type="text" placeholder="Profissão*" className="w-full p-2 rounded outline-[#1c60ad] bg-zinc-200 py-4 placeholder-zinc-500" />
                 <input minLength={16} maxLength={16} placeholder="Celular*" value={tel} onChange={(e) => setTel(maskPhone(e.currentTarget.value))} type="tel" className="w-full p-2 rounded outline-[#1c60ad] bg-zinc-200 py-4 placeholder-zinc-500" />
-                <button type="submit" onClick={handleSubmit} className="w-full bg-[#005BA6] px-8 py-4 text-white rounded hover:bg-[#005BA6] transition-colors">Enviar</button>
+                <button onClick={handleSubmit} className="w-full bg-[#005BA6] px-8 py-4 text-white rounded hover:bg-[#005BA6] transition-colors">Enviar</button>
             </form>
             <p className="text-white">powered by <a className="hover:underline" href="https://payjob.com.br">www.payjob.com.br</a></p>
         </div>
