@@ -48,7 +48,7 @@ export function Register() {
     return (
       <div className="flex flex-col justify-center items-center gap-8">
             <img src="./logoPJ.jpg" alt="logo payjob" className="w-64" />
-            <h1 className="text-xl font-bold max-w-sm text-center text-white">Preencha o cadastro e obtenha acesso exclusivo ao nosso grupo no WhatApp!</h1>
+            <h1 className="text-xl font-bold max-w-sm text-center text-white">Preencha o cadastro e obtenha acesso exclusivo ao nosso grupo no WhatsApp!</h1>
             <form className="shadow-lg w-full p-4 max-w-sm flex flex-col gap-4 bg-white rounded-lg items-center text-lg">
                 <input required onChange={(e)=> setName(e.currentTarget.value)} type="text" placeholder="Nome completo*" className="w-full p-2 rounded outline-[#1c60ad] bg-zinc-200 py-4 placeholder-zinc-500" />
                 <input required onChange={(e)=> setEmail(e.currentTarget.value)} type="email" placeholder="Email*" className="w-full p-2 rounded outline-[#1c60ad] bg-zinc-200 py-4 placeholder-zinc-500" />
