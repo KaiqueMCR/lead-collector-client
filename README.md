@@ -2,7 +2,7 @@
 
 A form that collects data from users to be used as leads, then give access to exclusive WhatsApp group.
 
-<img src="./.github/lead-collector-snapshot.png" />
+<img src="./.github/lead-collector-snapshot.PNG" />
 
 ## 👾 Techs 
 
