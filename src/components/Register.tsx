@@ -36,7 +36,7 @@ export function Register() {
           toast.success('Enviado com sucesso!')
           setTimeout(() => {
             window.location.replace(import.meta.env.VITE_REDIRECT_TO)
-          }, 3000)
+          }, 1500)
           setLoading(false)
         } catch (error) {
           setLoading(false)
