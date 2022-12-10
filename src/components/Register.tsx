@@ -34,9 +34,6 @@ export function Register() {
         try {
           await axios.post(import.meta.env.VITE_SERVER_URL, data)
           toast.success('Enviado com sucesso!')
-          setTimeout(() => {
-            window.location.replace(import.meta.env.VITE_REDIRECT_TO)
-          }, 1500)
           setLoading(false)
         } catch (error) {
           setLoading(false)
